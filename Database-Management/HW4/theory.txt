@@ -1,0 +1,33 @@
+Coby Chun
+CSE 414 HW4
+
+Part 3: Functional Dependency Theory
+
+a. R(A,B,C,D,E) =
+   R1(_D_,B), R2(A,C,D,E) =
+   R3(_C_,_E_,A), R4(C,D,E)
+
+   Explanation:
+   - R: D+ = DB and B+ = B; Split R into R1 and R2
+   - R1: Satisfies BCNF
+   - R2: CE+ = CEA and A+ = A; Split R2 into R3 and R4 
+   - R3: Satisfies BCNF   
+   - R4: CDE is a superkey; BCNF complete
+
+b. S(A,B,C,D,E) =
+   S1(_A_,E), S2(A,B,C,D) =
+   S3(_A_,_D_,B), S4(A,C,D)
+
+   Explanation:
+   - S: A+ = AE and E+ = E; Split S into S1 and S2
+   - S1: Satisfies BCNF
+   - S2: AD+ ~ DE+, AD+ = AEDB and B+ = B; Split S2 into S3 and S4
+   - S3: Satisfies BCNF   
+   - S4: ACD is a superkey; BCNF complete
+
+c. {A->A, B->B, C->C, D->D}; only trivial FD's
+
+d. Possible for {A->AD, B->BC, C->AC, D->BD} to satisfy the schema
+
+e. Possible for {B->BC, C->CB, A->AD, D-> DB} to satisfy the schema
+		

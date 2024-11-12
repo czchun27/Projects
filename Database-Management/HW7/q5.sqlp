@@ -1,0 +1,8 @@
+SELECT DISTINCT y1.`-car_code` country_code, y1.name country_name, seas
+FROM geo.world x, x.mondial.country y1
+LET seas = (SELECT z.name sea
+    FROM geo.world x, x.mondial.country y2, x.mondial.sea z
+    WHERE CONTAINS(CONCAT(" ", z.`-country`, " "), CONCAT(" ", y2.`-car_code`, " ") ) AND y1.name = y2.name
+)
+WHERE ARRAY_COUNT(seas) > 1
+ORDER BY ARRAY_COUNT(seas);
