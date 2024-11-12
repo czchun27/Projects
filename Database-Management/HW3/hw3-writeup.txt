@@ -1,0 +1,22 @@
+- Coby Chun
+- CSE 414 2024 SPR
+- HW3 Writeup
+
+Q: The DBMS that we use in this assignment, SQLServer, is running somewhere in one of 
+Microsoft's data centers. What are some of the pros and cons of using a cloud-hosted DBMS? 
+Would you recommend it to a fellow student for tinkering/experimentation? What about 
+recommending it to future co-workers for their project? If your answer differed, why?
+
+A: One of the pros of cloud-hosted DBMS is that they can run queries much faster than personal computers
+(I believe this was a reason we used one in this assignment). This increased computing power is essential 
+for large scale projects, such as those that many companies take on. However, it seems a bit overkill for 
+small student projects. Additionally, cloud based data base management systems can be accessed from multiple 
+computers, making it incredibly convenient for groups of people to work on.
+
+The main cons of cloud-hosted DBMS are that they are hosted by companies, meaning that we must pay a 
+subscription fee for the service. Additionally, we may encounter issues with out of date versions and
+server outages.
+
+Overall, cloud hosted DBMS seem overkill for students, since we don't have much of a practical need to
+manage enormous amounts of data. However, for companies or groups a cloud hosted DBMS seems like a good
+investment, as the convenience and efficiency seem worth any cons for larger groups of people. 
