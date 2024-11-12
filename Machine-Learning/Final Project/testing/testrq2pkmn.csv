@@ -1,0 +1,5 @@
+id,ndex,species,forme,type1,type2,ability1,ability2,abilityH,hp,attack,defense,spattack,spdefense,speed,total,weight,height,dex1,dex2,class,percent-male,percent-female,pre-evolution,egg-group1,egg-group2
+1,1,Bulbasaur,Bulbasaur,Grass,Poison,Overgrow,,Chlorophyll,45,49,49,65,65,45,318,15.2 lbs.,"2'04""",,,Seed Pokémon,0.875,0.125,,Monster,Grass
+162,162,Furret,Furret,Normal,,Run Away,Keen Eye,Frisk,85,76,64,45,55,90,415,71.6 lbs.,"5'11""",,,Long Body Pokémon,0.5,0.5,Sentret,Field,
+445,445,Garchomp,Garchomp,Dragon,Ground,Sand Veil,,Rough Skin,108,130,95,80,85,102,600,209.4 lbs.,"6'03""",It can fly at speeds rivaling jet planes. It dives into flocks of bird Pokémon and gulps the entire flock down whole.,The protuberances on its head serve as sensors. It can even detect distant prey.,Mach Pokémon,0.5,0.5,Gabite,Monster,Dragon
+900,382,Groudon,Groudon (Primal Reversion),Ground,Fire,Desolate Land,,,100,180,160,150,90,90,770,2204.0 lbs.,"16'05""",,,Continent Pokémon,,,,Undiscovered,
