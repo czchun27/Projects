@@ -1,0 +1,51 @@
+/*
+  Coby Chun
+  4/11/2024
+  CSE 154 AE Peter & Kasten
+  This css file assigns style to the creative section of the page structured in space.html.
+  Assigns container properties, text styles, colors, and more. The creative section
+  is specifically about two moons capable of hosting life in our solar system.
+*/
+#creative {
+  margin: auto;
+  width: 80%;
+  margin-bottom: 20px;
+  background-color: #E0DBD7;
+  padding: 30px;
+  border-top: 15px solid #551756;
+  border-bottom: 15px solid #551756;
+  font-size: 20px;
+}
+
+#creative img {
+  height: 16vw;
+  width: 100%;
+  border-radius: 10%;
+  border-color: black;
+  border-style: solid;
+  margin: 10px;
+  margin-left: 50px;
+}
+
+#creative img:hover {
+  border-color: lime;
+}
+
+#creative h2 {
+  font-size: 35px;
+}
+
+#creative h3 {
+  font-size: 28px;
+}
+
+#creative h2, h3 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+#creative section {
+  line-height: 2;
+  display: flex;
+  align-items: start;
+}

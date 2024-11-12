@@ -1,0 +1,147 @@
+/*
+  Coby Chun
+  4/11/2024
+  CSE 154 AE Peter & Kasten
+  This css file assigns style to the page structured in space.html.
+  Assigns container properties, text styles, colors, and more.
+*/
+
+body {
+  background-image: url("img/background.png");
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header, #intro section, #jokes section, #jokes article {
+  display: flex;
+}
+
+header, #jokes h2, #jokes > p, #jokes abbr {
+  color: #E0DBD7;
+}
+
+header h1 {
+  font-family: "Lora", serif;
+  text-transform: uppercase;
+  font-size: 120px;
+  margin-bottom: 0px;
+  text-shadow: #551756 20px 15px 20px;
+}
+
+header blockquote {
+  margin-top: 0px;
+  font-size: 22px;
+}
+
+header, #jokes article, #jokes section {
+  align-items: center;
+}
+
+header, #jokes article {
+  flex-direction: column;
+}
+
+header {
+  height: 100vh;
+  justify-content: center;
+}
+
+#intro h2, #facts h2, #jokes h2, footer p, #jokes > p {
+  text-align: center;
+}
+
+#intro, #facts {
+  padding: 30px;
+  border-top: 15px solid #551756;
+  border-bottom: 15px solid #551756;
+}
+
+#intro, #facts, #jokes {
+  margin: auto;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+#intro h2, #facts h2, #jokes h2 {
+  font-size: 35px;
+  text-decoration: underline;
+}
+
+#intro, #facts, footer {
+  background-color: #E0DBD7;
+}
+
+#intro p, #facts li {
+  font-size: 20px;
+}
+
+#intro img {
+  width: 24vw;
+  height: 100%;
+  border-radius: 10%;
+  margin: 10px;
+  margin-right: 50px;
+}
+
+#facts p {
+  font-size: 25px;
+}
+
+#facts a:link {
+  color: #FFA605;
+}
+
+#facts a:visited {
+  color: #1B505F;
+}
+
+#jokes section {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#jokes article {
+  margin: 15px;
+  height: 400px;
+  width: 300px;
+  background-color: #9B590D;
+  opacity: 80%;
+}
+
+#jokes article img {
+  height: 150px;
+  width: 150px;
+}
+
+#jokes hr {
+  width: 60%;
+}
+
+#jokes article p {
+  font-size: 24px;
+  align-self: flex-start;
+}
+
+#jokes abbr {
+  font-size: 28px;
+}
+
+#jokes article:hover .answer {
+  color: #191818;
+  display: inline;
+}
+
+.answer {
+  display: none;
+}
+
+footer {
+  width: 100%;
+}
+
+footer p, #jokes article {
+  padding: 20px;
+}
