@@ -1,0 +1,113 @@
+---
+title: "INFO 201 Project Proposal"
+author: "Coby Chun, Thuwaybah Sheikh, Haruka Sunakawa, Connor Costello"
+date: "2024-02-9"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Project Topic: U.S. Voter turnout (political participation)/education level
+
+## Data and Audience
+
+### Who is your target audience? Depending on the domain of your data, there may be a variety of audiences interested in using the dataset. You should home in on one of these audiences.
+
+* Our target audience will be U.S. citizens and voters for the sake of public knowledge, but also researchers for the sake of further research. Psephology becomes a hot button topic every few years around election time, and researchers in the field can use our data to further study and analyze voter dynamics.
+
+* Hopefully this data and further research could reach election administrators and education policymakers to enable future elections to be more inclusive, fair, and representative by understanding the connection between education level and voter turnout.
+
+### What are the datasets you’ll be working with? Please include background on who collected the data, how you can access it, and any additional information we should know about how this data came to be.
+
+* Effects of absolute and relative educations on voter turnout: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10225039/table/Tab4/?report=objectonly
+
+  * Dataset displaying the relationship between education level and voter turnout, amongst other demographic variables
+
+  * Displays a comparison between the years of 1976-1998, and the years 2000-2018
+
+  * Data provided by Yeaji Kim from the National Institutes of Health
+
+* US Election Voter Turnout Data by Year (Multiple Similar Datasets) https://www.electproject.org/election-data/voter-turnout-data 
+
+  * Contains Voter turnout data by year (Midterms and Presidential elections, e.g. 2020 Presidential Election: https://docs.google.com/spreadsheets/d/1h_2pR1pq8s_I5buZ5agXS9q1vLziECztN2uWeR6Czo0/edit?usp=sharing 
+
+  * Important variables include each state's voter turnout %, each state’s ballot count, and each state’s voter population
+
+  * Data provided by Dr. Michael P. McDonald of the University of Florida
+Also includes data on year to year voter demographics (Black, White, Hispanic, Other) HERE: https://docs.google.com/spreadsheets/d/1l5fpK7ysQhQbZPv9hnZ_-PO1J1zBVPXSSQjNejTXecY/edit?usp=sharing 
+
+### Provide a brief background: what do we already know about this topic? Why is it interesting? What do you want to add to what already exists?
+
+* In light of the 2024 primary elections that are currently occurring, it’s important to note that over the past years, the flaws in America’s election and voting system have become increasingly apparent and more prevalent, something we do not need to explain to our audience. 
+
+* Numerous factors including suppression, Voter ID Laws, gerrymandering, socio-economic disparities, and demographics are all barriers that immensely prevent individuals from voting and actively participating in civic engagement. While these barriers have been recognized, they have not been addressed or resolved. We already know that the demographic of education level is a significant one affecting voting behavior, where individuals possessing higher education are more likely to cast a vote than those who don’t have a college degree. This is an interesting topic, because although they have a right to vote and make their voice heard, many who don’t have a college degree tend to shy away from doing so. 
+
+* Our main goal is to further analyze the correlation between these two, while taking a closer look at the underlying factors preventing people from voting, including a lack of confidence, feelings of irrelevance, priorities (e.g., socio-economic hardships), and other barriers to participating regarding education level. We are curious to understand if a college education is the only way to strengthen our democracy, and if not, how can we increase civic engagement by getting more individuals to vote, regardless of education level. 
+
+### What do you want to tell to your audience based on the data? Please list a few specific questions or other potential story lines you want to explore. Each group needs to have at least as many research questions as the group size. You may later find that some of the answers are trivial, while some story lines cannot be pursued. But here you list your initial ideas.
+
+1. Based on the data looking at how voting rates and education levels are connected, we want to tell our audience that education is very important for getting people to participate in politics and help keep democracy strong.
+
+2. How does education level affect voter turnout among different demographic groups (age, ethnicity, gender)?
+
+3. How does what schools teach affect people's political views?
+
+4. How do other demographics, such as age, race, county, etcetera contribute to an inequity in education levels and therefore, voting rates?
+
+5. Do schools teaching critical thinking and politics change how people vote?
+
+6. Why does education increase voter turnout? 
+
+7. Is there a correlation between voter turnout and state educational funding?
+
+## Technical Description
+
+### How will you be reading in your data (i.e., are you using an API, or is it a static .csv/.json file)?
+
+* We will be reading our data as a .csv (data is excel spreadsheets)
+
+### What kind of data processing (reshaping, reformatting, etc.) will you need to do to your data?
+
+* We will likely be combining datasets together
+
+  * Combining U.S. Election Voter Turnout data has separate datasets for multiple election years; want to combine into one dataset.
+
+* We will also remove irrelevant data columns
+
+### What (major/new) libraries you will be using in this project (no need to list common libraries that are used in many projects such as dplyr)
+
+* Ggplot2, Caret, Survey
+
+### What questions, if any, will you be answering with statistical analysis/machine learning?
+
+* Are there specific education levels with much lower voter turnout?
+
+* Can we predict voter turnout based on certain demographics such as education level?
+
+### What major challenges do you anticipate?
+
+* Voter turnout data is known to be prone to reporting errors and biases, so finding quality data is an immediate challenge we will face.
+
+* Ensuring our data can be successfully representative of the population or populations that we want to generalize to.
+
+* Being able to communicate our results to the audience will be the last challenge we will need to address.
+
+## How's group work?
+
+### How will your group's communication go in this quarter?
+
+* We will communicate at least weekly to ensure our project stays on schedule. Will most likely ramp up meetings towards the end of the quarter as we start to reach deadlines.
+
+### Will you use any communication tools (Discord, Canvas, etc.)?
+
+* We will use Discord to communicate, coordinate meetings, and share research/findings/notes.
+
+### Do you see any problems or threats in your future group work?
+
+* No, there shouldn’t be any problems with our group work, as long as each member contributes their due part, we should be able to stay on schedule and produce a successful project.
+
+### How will you divide the tasks? 
+
+* Tasks will be divided as equally as possible according to each of our strengths/weaknesses, we will work together to integrate our data sets into the proper methods in order to display our findings. Additionally, we will individually focus on answering our own research questions in order to have a diverse set of findings and a unique final project at the end of the quarter.

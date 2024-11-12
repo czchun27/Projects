@@ -1,0 +1,113 @@
+---
+title: "Graphing"
+author: "Coby Chun"
+date: "2024-03-03"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Q: Do states with more young HS graduates have higher voter turnout?
+
+```{r}
+library(tidyverse)
+
+GE2000 <- read_delim("2000 November General Election - Turnout Rates.csv")
+GE2008 <- read_delim("2008 November General Election - Turnout Rates.csv")
+EDAT2000 <- read_delim("EduAttainment2000CLEAN - Sheet1.csv")
+EDAT2008 <- read_delim("EduAttainment2008CLEAN - Sheet1.csv")
+```
+
+```{r}
+vote2000 <- inner_join(GE2000, EDAT2000, by="State")
+vote2008 <- inner_join(GE2008, EDAT2008, by="State")
+names(vote2000) <- make.names(names(vote2000))
+names(vote2008) <- make.names(names(vote2008))
+head(vote2000, 3)
+head(vote2008, 3)
+```
+
+```{r}
+ggplot(vote2000, aes(HS, 
+                     (Highest.Office / Voting.Eligible.Population..VEP.*100)))+
+  geom_point() +
+  geom_smooth(method="lm", formula=y~x, se=FALSE) +
+  theme_light() +
+  labs(
+    title="2000 Voter Turnout by % of HS Graduate 18-24 year olds",
+    x="% of 18-24 year olds that Graduated High School",
+    y="State Voter Turnout (% of total Voting Population)"
+  )
+```
+
+```{r}
+ggplot(vote2000, aes(X18.24HSCompleters, 
+                     (Highest.Office / Voting.Eligible.Population..VEP.*100)))+
+  geom_point() +
+  geom_smooth(method="lm", formula=y~x, se=FALSE) +
+  theme_light() +
+  labs(
+    title="2000 Voter Turnout by % of HS Graduate 18-24 year olds",
+    x="% of 18-24 year olds that Graduated High School",
+    y="State Voter Turnout (% of total Voting Population)"
+  )
+```
+
+
+```{r}
+ggplot(vote2008, aes(HS, 
+                     (Highest.Office / Voting.Eligible.Population..VEP.*100)))+
+  geom_point() +
+  geom_smooth(method="lm", formula=y~x, se=FALSE) +
+  theme_light() +
+  labs(
+    title="2008 Voter Turnout by % of HS Graduate",
+    x="% of 18-24 year olds that Graduated High School",
+    y="State Voter Turnout (% of total Voting Population)"
+  )
+```
+
+```{r}
+ggplot(vote2008, aes(X18.24HSCompleters, 
+                     (Highest.Office / Voting.Eligible.Population..VEP.*100)))+
+  geom_point() +
+  geom_smooth(method="lm", formula=y~x, se=FALSE) +
+  theme_light() +
+  labs(
+    title="2008 Voter Turnout by % of HS Graduate 18-24 year olds",
+    x="% of 18-24 year olds that Graduated High School",
+    y="State Voter Turnout (% of total Voting Population)"
+  )
+```
+
+```{r}
+ggplot(vote2000, aes((Voting.Age.Population..VAP. - 
+                     Voting.Eligible.Population..VEP.)/
+                     Voting.Age.Population..VAP. * 100, 
+                     (Highest.Office / Voting.Eligible.Population..VEP.*100)))+
+  geom_point() +
+  geom_smooth(method="lm", formula=y~x, se=FALSE) +
+  theme_light() +
+  labs(
+    title="(2000) Voter Turnout by % of Ineligible Voters",
+    x="% Ineligible Voting Age Population",
+    y="State Voter Turnout (% of total Voting Population)"
+  )
+```
+
+```{r}
+ggplot(vote2008, aes((Voting.Age.Population..VAP. - 
+                     Voting.Eligible.Population..VEP.)/
+                     Voting.Age.Population..VAP. * 100, 
+                     (Highest.Office / Voting.Eligible.Population..VEP.*100)))+
+  geom_point() +
+  geom_smooth(method="lm", formula=y~x, se=FALSE) +
+  theme_light() +
+  labs(
+    title="(2000) Voter Turnout by % of Ineligible Voters",
+    x="% Ineligible Voting Age Population",
+    y="State Voter Turnout (% of total Voting Population)"
+  )
+```
