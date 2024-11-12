@@ -1,4 +1,7 @@
-
+"""
+Coby Chun
+AMATH 481 HW 2
+"""
 import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
