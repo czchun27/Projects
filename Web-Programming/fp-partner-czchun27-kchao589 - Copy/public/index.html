@@ -1,0 +1,176 @@
+<!--
+  Coby Chun & Kevin Chao
+  6/4/2024
+  CSE 154
+  Final Project
+
+  HTML file for the course selection page. Contains every page used in the program
+  and uses styles from styles.css and is modified by index.js.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1 id="school-name">Washington University of Hobby and Leisure Course Selection Hub</h1>
+      <button id="home-btn">Home</button>
+      <button id="login-btn">Login</button>
+      <button id="logout-btn" class="hidden">Logout</button>
+    </header>
+    <main>
+      <section id="home">
+        <button id="catalog-btn">Course Catalog</button>
+        <button id="my-courses-btn">My Courses</button>
+        <button id="degree-audit-btn">Degree Auditor</button>
+      </section>
+
+      <section id="my-courses" class="hidden">
+        <p id="empty-courses" class="hidden">No Courses for the User</p>
+        <h2>My Courses</h2>
+        <section id="curr-courses" class="course-list">
+          <h3>Current Courses</h3>
+          <hr>
+        </section>
+        <section id="past-courses" class="course-list">
+          <h3>Past Courses</h3>
+          <hr>
+        </section>
+        <button id="txn-btn">Add/Drop History</button>
+      </section>
+
+      <section id="txn" class="hidden">
+        <h2>Transaction History</h2>
+        <hr>
+      </section>
+
+      <section id="catalog" class="hidden ">
+        <section id="cat-header">
+          <section id="search">
+            <input id='search-term' type='text'>
+            <button id='search-btn'>search</button>
+          </section>
+          <section id="layout">
+            <span>View Options:</span>
+            <label>
+              <input name="layout" type="radio" value="grid" class="layout-option" checked>
+              <strong>Grid</strong>
+            </label>
+            <label>
+              <input name="layout" type="radio" value="list" class="layout-option">
+              <strong>List</strong>
+            </label>
+          </section>
+          <section id="filters">
+            <span>Filters:</span>
+            <label>
+              <input name="filters" type="radio" value="all" class="filter" checked>
+              <strong>All</strong>
+            </label>
+            <label>
+              <input name="filters" type="radio" value="craft" class="filter">
+              <strong>Craft</strong>
+            </label>
+            <label>
+              <input name="filters" type="radio" value="outdoor" class="filter">
+              <strong>Outdoors</strong>
+            </label>
+            <label>
+              <input name="filters" type="radio" value="home" class="filter">
+              <strong>Home</strong>
+            </label>
+            <label>
+              <input name="filters" type="radio" value="cook" class="filter">
+              <strong>Cook</strong>
+            </label>
+            <label>
+              <input name="filters" type="radio" value="tech" class="filter">
+              <strong>Tech</strong>
+            </label>
+            <label>
+              <input name="filters" type="radio" value="write" class="filter">
+              <strong>Write</strong>
+            </label>
+            <label>
+              <input name="filters" type="radio" value="available" class="filter">
+              <strong>Available</strong>
+            </label>
+          </section>
+        </section>
+        <h2>Courses</h2>
+        <hr>
+        <section id="course-display">
+        </section>
+      </section>
+
+      <section id="course-view" class="hidden">
+        <section>
+        </section>
+      </section>
+
+      <section id="confirmation" class="hidden">
+        <h2></h2>
+        <p id="confirm-number" class="hidden"></p>
+        <button></button>
+      </section>
+
+      <section id="degree-audit" class="hidden">
+        <h2>Degree Auditor</h2>
+        <form id="audit-form">
+          <label for="major">Choose your major: </label>
+          <select id="major" name="major">
+            <option value="Culinary">Culinary</option>
+            <option value="Digital Media">Digital Media</option>
+            <option value="Outdoors">Outdoors</option>
+            <option value="Crafts">Crafts</option>
+            <option value="Design">Design</option>
+            <option value="Writing">Writing</option>
+            <option value="Home">Home</option>
+          </select>
+          <button>Audit Your Degree</button>
+        </form>
+        <section id="degree-progress">
+          <section id="comp">
+            <h3>Completed Courses</h3>
+          </section>
+          <section id="ip">
+            <h3>In Progress Courses</h3>
+          </section>
+          <section id="ns">
+            <h3>Not Started Courses</h3>
+          </section>
+        </section>
+      </section>
+
+      <section id="login" class="hidden">
+        <h2>Login</h2>
+        <form id="login-form">
+          <label>Username <input id="username" name="user" type="text" required></label>
+          <label>Password <input id="password" name="pass" type="text" required></label>
+          <button id="sign-in">Sign In</button>
+        </form>
+        <p id="login-fail" class="hidden">Username or Password incorrect</p>
+      </section>
+
+      <section id="require-login" class="hidden">
+        <p>Please login</p>
+      </section>
+
+      <section id="error" class="hidden">
+        <p>An error occurred, please try again later</p>
+      </section>
+    </main>
+  </body>
+</html>

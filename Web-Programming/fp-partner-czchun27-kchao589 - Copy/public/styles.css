@@ -1,0 +1,138 @@
+/*
+  Coby Chun & Kevin Chao
+  6/4/2024
+  CSE 154
+  FP
+
+  Overall website style (color scheme, etc.). Has a lavender background
+  with black text on white boxes.
+*/
+body {
+  background-color: rgb(209, 206, 255);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+h2 {
+  text-align: center;
+}
+
+#degree-progress {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#audit-form {
+  width: auto;
+}
+
+#degree-progress section {
+  margin: 20px;
+}
+
+li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#cat-header {
+  display: flex;
+  flex-direction: column;
+}
+
+#search {
+  display: flex;
+  justify-content: center;
+}
+
+#search-term {
+  width: 500px;
+  height: 60px;
+}
+
+#course-display {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 20%;
+  margin: 10px;
+}
+
+#school-name {
+  font-family: "Crimson Text", serif;
+}
+
+main, header, form, .course-list {
+  display: flex;
+}
+
+header {
+  justify-content: space-between;
+}
+
+main, form, .course-list {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  outline-color: transparent;
+  text-decoration: none;
+  color: black;
+}
+
+p, button, form {
+  border: black solid 2px;
+  background-color: white;
+  text-align: center;
+  width: 200px;
+  padding: 20px;
+  margin: 20px;
+}
+
+label {
+  padding-bottom: 10px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+hr {
+  border-width: 1.5px;
+  border-style: solid;
+}
+
+.course p {
+  border: black solid 0px;
+}
+
+.course, .txn {
+  border: black solid 2px;
+}
+
+#course-desc, #course-info, .course-list, hr {
+  width: 80%;
+}
+
+.action-btn {
+  height: 50px;
+  width: 50px;
+}
+
+.txn p {
+  border: none;
+}
+
+.hidden {
+  display: none;
+}
